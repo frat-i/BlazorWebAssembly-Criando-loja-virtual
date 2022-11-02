@@ -1,4 +1,4 @@
-namespace BlazorShop.API;
+namespace BlazorLoja.API;
 
 public class WeatherForecast
 {

@@ -19,8 +19,9 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 builder.Services.AddScoped<IProdutoRepository, ProdutoRepository>(); // <- toda vez que referenciar a interface IProd..
                                                                      // vai ser criada uma instancia da classe concreta ProdRep..
 
-
 var app = builder.Build();
+
+
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
