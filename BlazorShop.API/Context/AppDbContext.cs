@@ -4,9 +4,8 @@ namespace BlazorShop.API.Context;
 
 public class AppDbContext : DbContext
 {
-    public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
-    {
-    }
+    public AppDbContext(DbContextOptions<AppDbContext> options)
+        : base(options) { }
 
     public DbSet<Carrinho>? Carrinhos { get; set; }
     public DbSet<CarrinhoItem>? CarrinhoItens { get; set; }
@@ -17,9 +16,9 @@ public class AppDbContext : DbContext
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);
-        //Produtos
-        //Beleza Category
+
         #region [seedwork]
+
         modelBuilder.Entity<Produto>().HasData(new Produto
         {
             Id = 1,
@@ -317,6 +316,7 @@ public class AppDbContext : DbContext
             Nome = "Calcados",
             IconCSS = "fas fa-shoe-prints"
         });
-        #endregion //
+
+        #endregion
     }
 }

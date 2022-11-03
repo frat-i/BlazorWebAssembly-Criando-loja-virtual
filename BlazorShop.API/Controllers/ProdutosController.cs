@@ -4,8 +4,9 @@ using BlazorShop.Models.DTOs;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BlazorShop.API.Controllers;
-[Route("api/[controller]")]
+
 [ApiController]
+[Route("api/[controller]")]
 public class ProdutosController : ControllerBase
 {
     private readonly IProdutoRepository _produtoRepository;
@@ -63,8 +64,7 @@ public class ProdutosController : ControllerBase
 
     [HttpGet]
     [Route("{categoriaId}/GetItensPorCategoria")]
-    public async Task<ActionResult<IEnumerable<ProdutoDto>>>
-      GetItensPorCategoria(int categoriaId)
+    public async Task<ActionResult<IEnumerable<ProdutoDto>>> GetItensPorCategoria(int categoriaId)
     {
         try
         {
